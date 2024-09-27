@@ -918,6 +918,8 @@ namespace ErrorCodes
     M(Bool, create_if_not_exists, false, "Enable IF NOT EXISTS for CREATE statements by default", 0) \
     M(Bool, mongodb_throw_on_unsupported_query, true, "If enabled, MongoDB tables will return an error when a MongoDB query cannot be built. Otherwise, ClickHouse reads the full table and processes it locally. This option does not apply to the legacy implementation or when 'allow_experimental_analyzer=0'.", 0) \
     \
+    M(Bool, default_table_on_top_query_level, false, "If enabled, use input as default table in SELECT instead of system.one", 0) \
+    \
     \
     /* ###################################### */ \
     /* ######## EXPERIMENTAL FEATURES ####### */ \

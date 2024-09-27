@@ -75,6 +75,7 @@ namespace Setting
 {
     extern const SettingsBool allow_introspection_functions;
     extern const SettingsLocalFSReadMethod storage_file_read_method;
+    extern const SettingsBool default_table_on_top_query_level;
 }
 
 namespace ErrorCodes
@@ -90,6 +91,7 @@ void applySettingsOverridesForLocal(ContextMutablePtr context)
 
     settings[Setting::allow_introspection_functions] = true;
     settings[Setting::storage_file_read_method] = LocalFSReadMethod::mmap;
+    settings[Setting::default_table_on_top_query_level] = true;
 
     context->setSettings(settings);
 }
