@@ -6043,6 +6043,12 @@ Enable PRQL - an alternative to SQL.
 Experimental tsToGrid aggregate function for Prometheus-like timeseries resampling. Cloud only
 )", EXPERIMENTAL) \
     \
+    DECLARE(Bool, default_table_on_top_query_level, false, R"(
+If enabled, use input as default table in SELECT instead of system.one.
+
+In `clickhouse-local` it is enabled by default and can be explicitly disabled.
+)", EXPERIMENTAL) \
+    \
     /* ####################################################### */ \
     /* ############ END OF EXPERIMENTAL FEATURES ############# */ \
     /* ####################################################### */ \

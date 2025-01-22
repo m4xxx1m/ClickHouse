@@ -74,6 +74,7 @@ namespace Setting
 {
     extern const SettingsBool allow_introspection_functions;
     extern const SettingsBool implicit_select;
+    extern const SettingsBool default_table_on_top_query_level;
     extern const SettingsLocalFSReadMethod storage_file_read_method;
 }
 
@@ -135,6 +136,7 @@ void applySettingsOverridesForLocal(ContextMutablePtr context)
     settings[Setting::allow_introspection_functions] = true;
     settings[Setting::storage_file_read_method] = LocalFSReadMethod::mmap;
     settings[Setting::implicit_select] = true;
+    settings[Setting::default_table_on_top_query_level] = true;
 
     context->setSettings(settings);
 }
